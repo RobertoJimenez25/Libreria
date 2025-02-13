@@ -85,7 +85,6 @@ if (!isset($usuario)) {
     echo "<div class='acciones'>
             <a href='EliminarUsuario.php' class='btn'>Eliminar Libro</a>
             <a href='Registro.php' class='btn'>Registro</a>
-            <a href='ActualizarLibro.php' class='btn'>Actualizar Libro</a>
         </div>
         </section>
     </main>
