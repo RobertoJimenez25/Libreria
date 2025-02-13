@@ -110,9 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <link rel="stylesheet" href="./styles/stylesactualizarLibro.css">
     </head>
     <body>
-    <header class="header">
-        <h3>Actualizar Libro</h3>
-    </header>
+    
     <div class="form-container">
         <h1>Actualizar Libro</h1>
         <form action="ActualizarLibro.php" method="post">
