@@ -12,15 +12,15 @@
         <h2 class="subtitle"> Librería Dummy </h2>
         <nav>
             <ul>
-                <li><a href = "catalogo.php">Ir a catalogo</a></li>
-                <li><a href="login.php">Iniciar Sesión</a></li>
+                <li><a href = "mainEmpleado.php">Ir a login Empleado</a></li>
+                <li><a href="login.php">Login Admin</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="indicaciones">
         <h2>Sumergete en historias fascinantes...</h2>
-        <p>Utiliza el menú para iniciar sesión si eres empleado <br> Estimado empleado explora nuestro catalogo y sumergete con la gran variedad de ejemplares.</p>
+        <p>Utiliza el menú para iniciar sesión si eres empleado <br> Estimado empleado explora nuestro mainEmpleado y sumergete con la gran variedad de ejemplares.</p>
     </div>
         <div class="carousel">
             <div class="carousel-container" id="carousel">

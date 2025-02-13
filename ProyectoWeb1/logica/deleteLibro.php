@@ -11,9 +11,9 @@ if (isset($_POST['isbn']) && !empty($_POST['isbn'])) {
         if ($consulta->affected_rows > 0) {
             $consulta->close();
             mysqli_close($conexion);
-            echo "<script>alert('Usuario eliminado con éxito'); window.location.href = '../eliminarUsuario.php';</script>";
+            echo "<script>alert('Usuario eliminado con éxito'); window.location.href = '../eliminarLibro.php';</script>";
         } else {
-            echo "<script>alert('No se encontró el usuario con el ISBN proporcionado'); window.location.href = '../eliminarUsuario.php';</script>";
+            echo "<script>alert('No se encontró el usuario con el ISBN proporcionado'); window.location.href = '../eliminarLibro.php';</script>";
         }
     } else {
         echo "Error en la consulta: " . $consulta->error;

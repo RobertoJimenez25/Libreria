@@ -55,7 +55,7 @@
         </form>
         <div class="links">
             <a href="./Registro.php">Nuevo registro</a>
-            <a href="./Principal.php">Ver registro</a>
+            <a href="./mainAdmin.php">Ver registro</a>
         </div>
     </div>
 

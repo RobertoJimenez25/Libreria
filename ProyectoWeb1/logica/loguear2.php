@@ -14,7 +14,7 @@ $array = $resultado->fetch_assoc();
 
 if ($array['contar'] > 0) {
     $_SESSION['usermane'] = $usuario;
-    header("location: ../catalogo.php");
+    header("location: ../mainEmpleado.php");
 } else {
     header("location: ../indexError.php");
 }

@@ -39,7 +39,7 @@ $stock = mysqli_real_escape_string($conexion, $_POST['stock']);
             if ($conexion->query($consulta) === TRUE) {
                 echo "<h1 class='success'>Libro registrado con éxito</h1>";
                 echo "<a class='check' href='../Registro.php'>Puedes generar un nuevo Libro</a>";
-                echo "<a href='../Principal.php'>Ver Libros</a>";
+                echo "<a href='../mainAdmin.php'>Ver Libros</a>";
             } else {
                 // Mostrar el error de MySQL si la consulta falla
                 echo "<p class='error'>Error al crear el registro: " . $conexion->error . "</p>";

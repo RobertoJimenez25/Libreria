@@ -3,15 +3,15 @@ session_start();
 $usuario = $_SESSION['usermane'];
 
 if (!isset($usuario)) {
-    header("location: ./login2.php");
+    header("location: ./login.php");
 } else {
     echo "<!DOCTYPE html>
 <html lang='es'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Dashboard - Principal</title>
-    <link rel='stylesheet' href='./styles/stylesPrincipal.css'>
+    <title>Dashboard - mainAdmin</title>
+    <link rel='stylesheet' href='./styles/stylesmainAdmin.css'>
 </head>
 <body>
     <header class='header'>
@@ -31,7 +31,7 @@ if (!isset($usuario)) {
     $generos_sql = "SELECT DISTINCT genero FROM libro";
     $generos_resultado = $conexion->query($generos_sql);
 
-    echo "<form method='GET' action='catalogo.php'>
+    echo "<form method='GET' action='mainAdmin.php'>
             <label for='genero'>Filtrar por Género:</label>
             <select name='genero' id='genero'>
                 <option value=''>Todos</option>";
@@ -93,7 +93,12 @@ if (!isset($usuario)) {
         echo "<p class='sin-registro'>Sin ningún registro</p>";
     }
 
-    echo "</section>
+    echo "<div class='acciones'>
+            <a href='eliminarLibro.php' class='btn'>Eliminar Libro</a>
+            <a href='Registro.php' class='btn'>Registro</a>
+            <a href='ActualizarLibro.php' class='btn'>Actualizar Libro</a>
+        </div>
+        </section>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

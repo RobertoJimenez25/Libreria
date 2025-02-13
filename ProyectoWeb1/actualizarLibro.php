@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $consulta = $conexion->prepare("UPDATE libro SET titulo = ?, autor = ?, editorial = ?, genero = ?, precio = ?, stock = ? WHERE isbn = ?");
         $consulta->bind_param("ssssdis", $titulo, $autor, $editorial, $genero, $precio, $stock, $isbn);
         if ($consulta->execute()) {
-            echo "<script>alert('Libro actualizado con éxito'); window.location.href = 'principal.php';</script>";
+            echo "<script>alert('Libro actualizado con éxito'); window.location.href = 'mainAdmin.php';</script>";
         } else {
             echo "<script>alert('Error al actualizar el libro: " . $consulta->error . "');</script>";
         }
