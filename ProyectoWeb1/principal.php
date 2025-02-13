@@ -40,14 +40,20 @@ if (!isset($usuario)) {
         echo "<option value='$genero'>$genero</option>";
     }
     echo "</select>
+            <label for='busqueda'>Buscar por Título o Autor:</label>
+            <input type='text' name='busqueda' id='busqueda' placeholder='Título o Autor'>
             <button type='submit'>Filtrar</button>
         </form>";
 
     $genero_filtro = isset($_GET['genero']) ? mysqli_real_escape_string($conexion, $_GET['genero']) : '';
+    $busqueda_filtro = isset($_GET['busqueda']) ? mysqli_real_escape_string($conexion, $_GET['busqueda']) : '';
 
-    $consulta_sql = "SELECT * FROM libro";
+    $consulta_sql = "SELECT * FROM libro WHERE 1=1";
     if ($genero_filtro) {
-        $consulta_sql .= " WHERE genero = '$genero_filtro'";
+        $consulta_sql .= " AND genero = '$genero_filtro'";
+    }
+    if ($busqueda_filtro) {
+        $consulta_sql .= " AND (titulo LIKE '%$busqueda_filtro%' OR autor LIKE '%$busqueda_filtro%')";
     }
     $resultado = $conexion->query($consulta_sql);
     $count = mysqli_num_rows($resultado);
@@ -85,6 +91,7 @@ if (!isset($usuario)) {
     echo "<div class='acciones'>
             <a href='EliminarUsuario.php' class='btn'>Eliminar Libro</a>
             <a href='Registro.php' class='btn'>Registro</a>
+            <a href='ActualizarLibro.php' class='btn'>Actualizar Libro</a>
         </div>
         </section>
     </main>
