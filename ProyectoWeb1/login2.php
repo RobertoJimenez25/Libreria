@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col">
             <h1>¡Bienvenido! <br> Inicia Sesión para continuar.</h1>
-            <form method="POST" action="logica/loguear.php">
+            <form method="POST" action="logica/loguear2.php">
                 <input type="text" name="usuario" placeholder="Usuario" />
                 <input type="password" name="contraseña" placeholder="Contraseña" />
                 <button type="submit">Iniciar Sesión</button>
