@@ -17,33 +17,38 @@
             <h2>Formulario</h2>
             <hr>
             <div class="form-group">
-                <label for="nombre_artista">Ingresa el nombre del artista:</label>
-                <input type="text" name="nombre_artista" required maxlength="100" placeholder="Nombre del artista:">
+                <label for="isbn">Ingresa el ISBN del Libro:</label>
+                <input type="text" name="isbn" required maxlength="100" placeholder="ISBN del Libro:">
             </div>
 
             <div class="form-group">
-                <label for="albums">¿Cuántos álbumes tiene?</label>
-                <input type="text" name="albums" required maxlength="100" placeholder="Cantidad de álbumes:">
+                <label for="titulo">Titulo del Libro:</label>
+                <input type="text" name="titulo" required maxlength="100" placeholder="Titulo del Libro:">
             </div>
 
             <div class="form-group">
-                <label for="genero_musical">¿Qué género musical representa?</label>
-                <input type="text" name="genero_musical" required maxlength="100" placeholder="Género musical:">
+                <label for="autor">Autor del Libro:</label>
+                <input type="text" name="autor" required maxlength="100" placeholder="Autor del Libro:">
             </div>
 
             <div class="form-group">
-                <label for="disquera">¿Cuál es su disquera?</label>
-                <input type="text" name="disquera" required maxlength="100" placeholder="Nombre de la disquera:">
+                <label for="editorial">Editorial del Libro:</label>
+                <input type="text" name="editorial" required maxlength="100" placeholder="Editorial del Libro:">
             </div>
 
             <div class="form-group">
-                <label for="usuario">Usuario o correo electrónico:</label>
-                <input type="text" name="usuario" required maxlength="100" placeholder="Usuario o correo:">
+                <label for="genero">Genero Literario:</label>
+                <input type="text" name="genero" required maxlength="100" placeholder="Genero Literario:">
             </div>
 
             <div class="form-group">
-                <label for="contraseña">Contraseña:</label>
-                <input type="password" name="contraseña" required maxlength="10" placeholder="Contraseña:">
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" required maxlength="30" placeholder="Precio:">
+            </div>
+
+            <div class="form-group">
+                <label for="stock">Stock Disponible:</label>
+                <input type="text" name="stock" required maxlength="100" placeholder="Stock Disponible:">
             </div>
 
             <button type="submit" name="submit">Enviar Registro</button>

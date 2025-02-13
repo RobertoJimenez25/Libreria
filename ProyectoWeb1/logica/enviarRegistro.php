@@ -10,7 +10,8 @@ $autor = mysqli_real_escape_string($conexion, $_POST['autor']);
 $editorial = mysqli_real_escape_string($conexion, $_POST['editorial']);
 $editorial = mysqli_real_escape_string($conexion, $_POST['editorial']);
 $genero = mysqli_real_escape_string($conexion, $_POST['genero']);
-$stock = mysqli_real_escape_string($conexion, $_POST['stock']); // Considera hashear la contraseña
+$precio = mysqli_real_escape_string($conexion, $_POST['precio']);
+$stock = mysqli_real_escape_string($conexion, $_POST['stock']); 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,7 +25,7 @@ $stock = mysqli_real_escape_string($conexion, $_POST['stock']); // Considera has
     <div class="container">
         <?php
         // Verificar si el usuario ya existe
-        $buscarusuario = "SELECT * FROM usuario WHERE usuario = '$nombreUser'";
+        $buscarusuario = "SELECT * FROM libro WHERE isbn = '$isbn'";
         $resultado = $conexion->query($buscarusuario);
 
         if ($resultado && $resultado->num_rows > 0) {
