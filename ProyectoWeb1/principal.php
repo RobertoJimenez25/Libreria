@@ -1,6 +1,6 @@
 <?php
 session_start();
-$usuario = $_SESSION['usermane']; // 413112576
+$usuario = $_SESSION['usermane'];
 
 if (!isset($usuario)) {
     header("location: ./index.php");
@@ -23,11 +23,32 @@ if (!isset($usuario)) {
     <main>
         <section class='tabla-section'>
             <h2>Lista de Libros</h2>";
-            
+
     require "./logica/conexion.php";
     mysqli_set_charset($conexion, 'utf8');
 
+    // Obtener todos los géneros disponibles
+    $generos_sql = "SELECT DISTINCT genero FROM libro";
+    $generos_resultado = $conexion->query($generos_sql);
+
+    echo "<form method='GET' action='principal.php'>
+            <label for='genero'>Filtrar por Género:</label>
+            <select name='genero' id='genero'>
+                <option value=''>Todos</option>";
+    while ($genero_row = mysqli_fetch_assoc($generos_resultado)) {
+        $genero = $genero_row['genero'];
+        echo "<option value='$genero'>$genero</option>";
+    }
+    echo "</select>
+            <button type='submit'>Filtrar</button>
+        </form>";
+
+    $genero_filtro = isset($_GET['genero']) ? mysqli_real_escape_string($conexion, $_GET['genero']) : '';
+
     $consulta_sql = "SELECT * FROM libro";
+    if ($genero_filtro) {
+        $consulta_sql .= " WHERE genero = '$genero_filtro'";
+    }
     $resultado = $conexion->query($consulta_sql);
     $count = mysqli_num_rows($resultado);
 
