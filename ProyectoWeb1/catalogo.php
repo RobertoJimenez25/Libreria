@@ -3,7 +3,7 @@ session_start();
 $usuario = $_SESSION['usermane'];
 
 if (!isset($usuario)) {
-    header("location: ./login.php");
+    header("location: ./login2.php");
 } else {
     echo "<!DOCTYPE html>
 <html lang='es'>
