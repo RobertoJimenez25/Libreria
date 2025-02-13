@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/stylesCliente.css">
+    <link rel="stylesheet" href="styles/stylesIndex.css">
     <title>Libreria Dummy</title>
 </head>
 <body>
@@ -35,6 +35,6 @@
     <footer>
         <p>&copy; 2025 Librería Dummy</p>
     </footer>
-    <script src="scripts/scriptCliente.js"></script>
+    <script src="scripts/scriptIndex.js"></script>
 </body>
 </html>
