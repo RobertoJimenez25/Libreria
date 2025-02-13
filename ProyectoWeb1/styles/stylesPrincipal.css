@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    background-color: #0032A0;
+    background-color: #274394;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -21,7 +21,7 @@ body {
 }
 
 .header .usuario {
-    color: #EDFF44;
+    color: #ff6f00;
 }
 
 .header .btn-salir {
