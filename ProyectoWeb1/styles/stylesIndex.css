@@ -1,0 +1,80 @@
+@import url(https://db.onlinewebfonts.com/c/67821e7ef9a2952d6e7757a6cae5a826?family=Novecento+WideBold);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0032A0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estructura del Login */
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.col {
+    max-width: 400px;
+    width: 90%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 24px;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+    color: #0032A0;
+    font-weight: bold;
+}
+p {
+    font-size: 14px;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+    color: #0032A0;
+}
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    font-size: 15px;
+    gap: 15px;
+    font-family: "Poppins";
+    background-color: #EDFF44;
+    color: #0032A0;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d1e046;
+}
