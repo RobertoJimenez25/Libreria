@@ -58,6 +58,8 @@ if (!isset($usuario)) {
     $resultado = $conexion->query($consulta_sql);
     $count = mysqli_num_rows($resultado);
 
+    $low_stock_books = [];
+
     if ($count > 0) {
         echo "<table class='tabla-estilos'>
                 <thead>
@@ -73,6 +75,9 @@ if (!isset($usuario)) {
                 </thead>
                 <tbody>";
         while ($row = mysqli_fetch_assoc($resultado)) {
+            if ($row['stock'] < 10) { // Cambia el valor 10 por el umbral que desees
+                $low_stock_books[] = $row['titulo'];
+            }
             echo "<tr>
                     <td>{$row['isbn']}</td>
                     <td>{$row['titulo']}</td>
@@ -90,6 +95,14 @@ if (!isset($usuario)) {
 
     echo "</section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var lowStockBooks = " . json_encode($low_stock_books) . ";
+            if (lowStockBooks.length > 0) {
+                alert('Los siguientes libros tienen bajo stock: ' + lowStockBooks.join(', '));
+            }
+        });
+    </script>
 </body>
 </html>";
 }
