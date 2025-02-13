@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Eliminar Libro</h1>
         <form method="POST" action="./logica/deleteUsuario.php">
-            <input type="text" name="usuario" placeholder="ISBN del Libro a Eliminar" required />
+            <input type="text" name="isbn" placeholder="ISBN del Libro a Eliminar" required />
             <button type="submit">Eliminar</button>
         </form>
         <a href="principal.php" class="btn-back">Inicio de Listas</a>
